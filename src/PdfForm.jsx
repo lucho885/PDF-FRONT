@@ -65,11 +65,12 @@ function PdfForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/pdf", {
+      const response = await fetch("https://pdf-back-83m2.onrender.com/pdf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      
 
       if (!response.ok) {
         throw new Error("Error al generar el PDF");
