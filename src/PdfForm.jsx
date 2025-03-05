@@ -65,7 +65,7 @@ function PdfForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://pdf-back-83m2.onrender.com/pdf", {
+      const response = await fetch("https://pdf-back-production.up.railway.app/pdf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
